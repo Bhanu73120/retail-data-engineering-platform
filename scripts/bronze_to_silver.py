@@ -6,42 +6,20 @@ from src.warehouse.save_data import save_csv
 from src.transformation.business_rules import apply_business_rules
 from src.utils.logger import logger
 
-# def load_data():
-#     orders = pd.read_csv("data/bronze/orders.csv")
-#     return orders;
 
-# def save_data(orders):
-#     orders.to_csv("data/silver/orders.csv",index =False)
+def main():
 
-logger.info("Silver layer Started")
-orders = load_csv(BRONZE_DATA_PATH)
-logger.info("Silver data loaded successfully")
-orders = apply_business_rules(orders)
-logger.info("Applied Business Rules")
-save_csv(orders, SILVER_DATA_PATH)
-logger.info("Silver Layer Stored Successfully")
+    logger.info("Silver Layer Started")
 
+    orders = load_csv(BRONZE_DATA_PATH)
+    logger.info("Bronze data loaded successfully")
 
-#print("silver data stored succesfully")
+    orders = apply_business_rules(orders)
+    logger.info("Business rules applied successfully")
+
+    save_csv(orders, SILVER_DATA_PATH)
+    logger.info("Silver data saved successfully")
 
 
-# orders = pd.read_csv("data/bronze/orders.csv")
-
-# orders["price_category"] = np.where(
-#     orders["price"]>10000,
-#     "high",
-#     "low"
-# )
-
-# orders["discount"] = np.where(
-#     orders["price"] >= 10000,
-#     10,5
-# )
-
-# orders["final_price"] = orders["price"]-(
-#     orders["price"]*orders["discount"]/100)
-
-# print(orders)
-
-#orders.to_csv("data/silver/orders.csv",index=False)
-
+if __name__ == "__main__":
+    main()

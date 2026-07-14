@@ -1,6 +1,6 @@
-order_id,customer_name,product,price,price_category,discount,final_price
-101,Bhanu,Laptop,80000,high,10,72000.0
-102,Ravi,Mouse,500,low,5,475.0
-103,Arjun,Keyboard,1200,low,5,1140.0
-104,Unknown,Monitor,25000,high,10,22500.0
-105,Kiran,Unknown,7000,low,5,6650.0
+order_id,customer_name,product,price,order_date,price_category,discount,final_price
+101,Bhanu,Laptop,82000,2026-07-01,High,15,69700.0
+102,Ravi,Mouse,500,2026-07-02,Low,5,475.0
+103,Arjun,Keyboard,1200,2026-07-03,Low,5,1140.0
+104,Unknown,Monitor,25000,2026-07-04,Medium,10,22500.0
+105,Kiran,Unknown,7000,2026-07-05,Low,5,6650.0

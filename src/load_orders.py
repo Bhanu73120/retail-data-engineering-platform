@@ -5,6 +5,7 @@ from src.database import get_connection
 connection = None #in finally we have this if there is exception our ide dont know about cursor so i wrote it as 0
 cursor = None
 success = False
+data = []
 
 try:
     logger.info("Starting Bronze to MySQL Loading Process")
@@ -21,22 +22,33 @@ try:
     logger.info("Connected to MySQL")
 
     # Insert records
+   
     for _, row in df.iterrows():
 
-        cursor.execute(
-            """
-            INSERT INTO orders
-            (order_id, customer_name, product, price, order_date)
-            VALUES (%s, %s, %s, %s, %s)
-            """,
-            (
-                row["order_id"],
-                row["customer_name"],
-                row["product"],
-                row["price"],
-                row["order_date"]
-            )
+       data.append(
+        (
+            row["order_id"],
+            row["customer_name"],
+            row["product"],
+            row["price"],
+            row["order_date"]
         )
+    )
+       
+       cursor.executemany(
+    """
+    INSERT INTO orders
+    (order_id, customer_name, product, price, order_date)
+    VALUES (%s,%s,%s,%s,%s)
+
+    ON DUPLICATE KEY UPDATE
+    customer_name = VALUES(customer_name),
+    product = VALUES(product),
+    price = VALUES(price),
+    order_date = VALUES(order_date)
+    """,
+    data
+)
 
     # Save transaction
     connection.commit()
