@@ -1,7 +1,7 @@
 order_id,customer_name,product,price,order_date
 101,Bhanu,Laptop,82000,2026-07-01
-102, Ravi ,Mouse,500,2026-07-02
-102, Ravi ,Mouse,500,2026-07-02
+102,Ravi,Mouse,500,2026-07-02
+102,Ravi,Mouse,500,2026-07-02
 103,ARJUN,Keyboard,1200,2026-07-03
 104,,Monitor,25000,2026-07-04
 105,Kiran,,7000,2026-07-05
