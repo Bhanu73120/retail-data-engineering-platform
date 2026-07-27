@@ -1,56 +1,59 @@
 import os
 import pandas as pd
 
-from airflow.models import Variable
 from airflow.providers.mysql.hooks.mysql import MySqlHook
 
-from config.config import (
-    BRONZE_DATA_PATH,
-    SILVER_DATA_PATH,
-    GOLD_DATA_PATH,
-)
+from airflow.models import Variable
 
 
 # ---------------------------------------------------------
 # Airflow Variable
 # ---------------------------------------------------------
 
-PROJECT_PATH = Variable.get("PROJECT_PATH")
-
-
-# ---------------------------------------------------------
-# Build absolute paths
-# ---------------------------------------------------------
-
-BRONZE_FILE_PATH = os.path.join(
-    PROJECT_PATH,
-    BRONZE_DATA_PATH
-)
-
-SILVER_FILE_PATH = os.path.join(
-    PROJECT_PATH,
-    SILVER_DATA_PATH
-)
-
-GOLD_FILE_PATH = os.path.join(
-    PROJECT_PATH,
-    GOLD_DATA_PATH
+PROJECT_PATH = Variable.get(
+    "PROJECT_PATH"
 )
 
 
-# ---------------------------------------------------------
-# Bronze → MySQL
-# ---------------------------------------------------------
+# =========================================================
+# BRONZE → MYSQL
+# =========================================================
 
-def load_orders():
+def load_orders(
+    bronze_file_path
+):
 
-    print("Starting Bronze to MySQL loading")
+    print(
+        "Starting Bronze to MySQL loading"
+    )
 
-    print(f"Reading Bronze file from: {BRONZE_FILE_PATH}")
+    print(
+        f"Reading Bronze file from: "
+        f"{bronze_file_path}"
+    )
 
-    df = pd.read_csv(BRONZE_FILE_PATH)
 
-    print(f"Bronze records found: {len(df)}")
+    # -----------------------------------------------------
+    # Read Bronze File
+    # -----------------------------------------------------
+
+    df = pd.read_csv(
+        bronze_file_path
+    )
+
+    bronze_count = len(
+        df
+    )
+
+    print(
+        f"Bronze records found: "
+        f"{bronze_count}"
+    )
+
+
+    # -----------------------------------------------------
+    # MySQL Connection
+    # -----------------------------------------------------
 
     hook = MySqlHook(
         mysql_conn_id="retail_mysql"
@@ -60,7 +63,13 @@ def load_orders():
 
     cursor = connection.cursor()
 
+
+    # -----------------------------------------------------
+    # Insert Bronze Data
+    # -----------------------------------------------------
+
     query = """
+
     INSERT INTO orders
     (
         order_id,
@@ -69,7 +78,15 @@ def load_orders():
         price,
         order_date
     )
-    VALUES (%s,%s,%s,%s,%s)
+
+    VALUES
+    (
+        %s,
+        %s,
+        %s,
+        %s,
+        %s
+    )
 
     ON DUPLICATE KEY UPDATE
 
@@ -77,7 +94,9 @@ def load_orders():
     product = VALUES(product),
     price = VALUES(price),
     order_date = VALUES(order_date)
+
     """
+
 
     data = []
 
@@ -93,6 +112,7 @@ def load_orders():
             )
         )
 
+
     cursor.executemany(
         query,
         data
@@ -100,27 +120,62 @@ def load_orders():
 
     connection.commit()
 
+
     print(
-        f"Successfully loaded {len(data)} Bronze records into MySQL"
+        f"Successfully loaded "
+        f"{len(data)} Bronze records "
+        f"into MySQL"
     )
 
+
+    # -----------------------------------------------------
+    # Close Connection
+    # -----------------------------------------------------
+
     cursor.close()
+
     connection.close()
 
 
-# ---------------------------------------------------------
-# Silver → MySQL
-# ---------------------------------------------------------
+# =========================================================
+# SILVER → MYSQL
+# =========================================================
 
-def load_silver():
+def load_silver(
+    silver_file_path
+):
 
-    print("Starting Silver to MySQL loading")
+    print(
+        "Starting Silver to MySQL loading"
+    )
 
-    print(f"Reading Silver file from: {SILVER_FILE_PATH}")
+    print(
+        f"Reading Silver file from: "
+        f"{silver_file_path}"
+    )
 
-    df = pd.read_csv(SILVER_FILE_PATH)
 
-    print(f"Silver records found: {len(df)}")
+    # -----------------------------------------------------
+    # Read Silver File
+    # -----------------------------------------------------
+
+    df = pd.read_csv(
+        silver_file_path
+    )
+
+    silver_count = len(
+        df
+    )
+
+    print(
+        f"Silver records found: "
+        f"{silver_count}"
+    )
+
+
+    # -----------------------------------------------------
+    # MySQL Connection
+    # -----------------------------------------------------
 
     hook = MySqlHook(
         mysql_conn_id="retail_mysql"
@@ -130,7 +185,13 @@ def load_silver():
 
     cursor = connection.cursor()
 
+
+    # -----------------------------------------------------
+    # Insert Silver Data
+    # -----------------------------------------------------
+
     query = """
+
     INSERT INTO orders_silver
     (
         order_id,
@@ -142,7 +203,18 @@ def load_silver():
         discount,
         final_price
     )
-    VALUES (%s,%s,%s,%s,%s,%s,%s,%s)
+
+    VALUES
+    (
+        %s,
+        %s,
+        %s,
+        %s,
+        %s,
+        %s,
+        %s,
+        %s
+    )
 
     ON DUPLICATE KEY UPDATE
 
@@ -153,7 +225,9 @@ def load_silver():
     price_category = VALUES(price_category),
     discount = VALUES(discount),
     final_price = VALUES(final_price)
+
     """
+
 
     data = []
 
@@ -172,6 +246,7 @@ def load_silver():
             )
         )
 
+
     cursor.executemany(
         query,
         data
@@ -179,27 +254,62 @@ def load_silver():
 
     connection.commit()
 
+
     print(
-        f"Successfully loaded {len(data)} Silver records into MySQL"
+        f"Successfully loaded "
+        f"{len(data)} Silver records "
+        f"into MySQL"
     )
 
+
+    # -----------------------------------------------------
+    # Close Connection
+    # -----------------------------------------------------
+
     cursor.close()
+
     connection.close()
 
 
-# ---------------------------------------------------------
-# Gold → MySQL
-# ---------------------------------------------------------
+# =========================================================
+# GOLD → MYSQL
+# =========================================================
 
-def load_sales_summary():
+def load_sales_summary(
+    gold_file_path
+):
 
-    print("Starting Gold to MySQL loading")
+    print(
+        "Starting Gold to MySQL loading"
+    )
 
-    print(f"Reading Gold file from: {GOLD_FILE_PATH}")
+    print(
+        f"Reading Gold file from: "
+        f"{gold_file_path}"
+    )
 
-    df = pd.read_csv(GOLD_FILE_PATH)
 
-    print(f"Gold records found: {len(df)}")
+    # -----------------------------------------------------
+    # Read Gold File
+    # -----------------------------------------------------
+
+    df = pd.read_csv(
+        gold_file_path
+    )
+
+    gold_count = len(
+        df
+    )
+
+    print(
+        f"Gold records found: "
+        f"{gold_count}"
+    )
+
+
+    # -----------------------------------------------------
+    # MySQL Connection
+    # -----------------------------------------------------
 
     hook = MySqlHook(
         mysql_conn_id="retail_mysql"
@@ -209,18 +319,31 @@ def load_sales_summary():
 
     cursor = connection.cursor()
 
+
+    # -----------------------------------------------------
+    # Insert Gold Data
+    # -----------------------------------------------------
+
     query = """
+
     INSERT INTO sales_summary
     (
         metric,
         value
     )
-    VALUES (%s,%s)
+
+    VALUES
+    (
+        %s,
+        %s
+    )
 
     ON DUPLICATE KEY UPDATE
 
     value = VALUES(value)
+
     """
+
 
     data = []
 
@@ -233,6 +356,7 @@ def load_sales_summary():
             )
         )
 
+
     cursor.executemany(
         query,
         data
@@ -240,9 +364,18 @@ def load_sales_summary():
 
     connection.commit()
 
+
     print(
-        f"Successfully loaded {len(data)} Gold records into MySQL"
+        f"Successfully loaded "
+        f"{len(data)} Gold records "
+        f"into MySQL"
     )
 
+
+    # -----------------------------------------------------
+    # Close Connection
+    # -----------------------------------------------------
+
     cursor.close()
+
     connection.close()
