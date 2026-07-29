@@ -1,0 +1,11 @@
+order_id,customer_name,product,price,order_date,price_category,discount,final_price
+111,Ravi Kumar,Laptop,55000,2026-07-27,High,15,46750.0
+112,Priya Reddy,Mobile,25000,2026-07-27,Medium,10,22500.0
+113,Arjun Rao,Headphones,2500,2026-07-27,Low,5,2375.0
+114,Sneha Sharma,Keyboard,1500,2026-07-27,Low,5,1425.0
+115,Ravi Kumar,Laptop,55000,2026-07-27,High,15,46750.0
+116,Rahul Verma,Mouse,800,2026-07-27,Low,5,760.0
+117,Anjali Reddy,Monitor,12000,2026-07-27,Medium,10,10800.0
+118,Kiran Kumar,Usb Cable,500,2026-07-27,Low,5,475.0
+119,Priya Reddy,Mobile,25000,2026-07-27,Medium,10,22500.0
+120,Suresh Babu,Laptop,60000,2026-07-27,High,15,51000.0
