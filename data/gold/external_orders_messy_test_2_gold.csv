@@ -1,0 +1,6 @@
+metric,value,batch_id
+Total Revenue,43191.75000000001,BATCH_421E79CB
+Total Orders,35.0,BATCH_421E79CB
+Average Order Value,1234.0500000000002,BATCH_421E79CB
+Highest Order Value,1899.05,BATCH_421E79CB
+Lowest Order Value,474.05,BATCH_421E79CB

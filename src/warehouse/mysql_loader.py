@@ -41,6 +41,12 @@ def load_orders(
         bronze_file_path
     )
 
+    batch_id = df["batch_id"].iloc[0]
+    print(
+        f"Batch ID: "
+        f"{batch_id}"
+    )
+
     bronze_count = len(
         df
     )
@@ -76,11 +82,13 @@ def load_orders(
         customer_name,
         product,
         price,
-        order_date
+        order_date,
+        batch_id
     )
 
     VALUES
     (
+        %s,
         %s,
         %s,
         %s,
@@ -93,7 +101,8 @@ def load_orders(
     customer_name = VALUES(customer_name),
     product = VALUES(product),
     price = VALUES(price),
-    order_date = VALUES(order_date)
+    order_date = VALUES(order_date),
+    batch_id = VALUES(batch_id)
 
     """
 
@@ -109,6 +118,7 @@ def load_orders(
                 row["product"],
                 row["price"],
                 row["order_date"],
+                row["batch_id"],
             )
         )
 
@@ -163,6 +173,12 @@ def load_silver(
         silver_file_path
     )
 
+    batch_id = df["batch_id"].iloc[0]
+    print(
+        f"Batch ID: "
+        f"{batch_id}"
+    )
+
     silver_count = len(
         df
     )
@@ -201,11 +217,13 @@ def load_silver(
         order_date,
         price_category,
         discount,
-        final_price
+        final_price,
+        batch_id
     )
 
     VALUES
     (
+        %s,
         %s,
         %s,
         %s,
@@ -224,7 +242,8 @@ def load_silver(
     order_date = VALUES(order_date),
     price_category = VALUES(price_category),
     discount = VALUES(discount),
-    final_price = VALUES(final_price)
+    final_price = VALUES(final_price),
+    batch_id = VALUES(batch_id)
 
     """
 
@@ -243,6 +262,7 @@ def load_silver(
                 row["price_category"],
                 row["discount"],
                 row["final_price"],
+                row["batch_id"],
             )
         )
 
@@ -297,6 +317,13 @@ def load_sales_summary(
         gold_file_path
     )
 
+    batch_id = df["batch_id"].iloc[0]
+
+    print(
+        f"Batch ID: "
+        f"{batch_id}"
+    )
+
     gold_count = len(
         df
     )
@@ -329,18 +356,21 @@ def load_sales_summary(
     INSERT INTO sales_summary
     (
         metric,
-        value
+        value,
+        batch_id
     )
 
     VALUES
     (
+        %s,
         %s,
         %s
     )
 
     ON DUPLICATE KEY UPDATE
 
-    value = VALUES(value)
+    value = VALUES(value),
+    batch_id = VALUES(batch_id)
 
     """
 
@@ -352,7 +382,8 @@ def load_sales_summary(
         data.append(
             (
                 row["metric"],
-                row["value"]
+                row["value"],
+                row["batch_id"]
             )
         )
 
