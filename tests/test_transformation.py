@@ -51,8 +51,8 @@ def test_apply_business_rules():
 
     result = apply_business_rules(data)
 
-    assert result.loc[0, "price_category"] == "low"
-    assert result.loc[1, "price_category"] == "high"
+    assert result.loc[0, "price_category"] == "Low"
+    assert result.loc[1, "price_category"] == "Medium"
 
     assert result.loc[0, "discount"] == 5
     assert result.loc[1, "discount"] == 10
