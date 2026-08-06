@@ -1,111 +1,111 @@
-order_id,customer_name,product,price,order_date
-1038,  Arjun,Webcam,4500,2026-07-07
-1052,Meera  , Mouse ,1200,2026-07-22
-1028,Kiran  , Headphones ,3500,2026-07-23
-1005,  Grace,Laptop,75000,2026-07-01
-1037,Bob,Monitor,15000,2026-07-19
-1023,  Eve,Mouse,1200,2026-07-08
-1003,Diana,Keyboard,2500,2026-07-24
-1032,  Henry, Printer ,12000,2026-07-09
-1007,Ivy,Laptop,75000,2026-07-18
-1025,  Eve  ,Tablet,30000,2026-07-21
-1038,  Arjun,Webcam,4500,2026-07-07
-1022,Kiran,monitor,15000,2026-07-25
-1036,Frank  , Printer ,12000,2026-07-09
-1033,Arjun,Monitor,15000,2026-07-22
-1046,Rahul,Laptop,75000,2026-07-04
-1015,  Grace  ,mouse,1200,2026-07-12
-1006,Bob,Monitor,15000,2026-07-08
-1019,Bob,Headphones,3500,2026-07-21
-1047,  Charlie,Keyboard,2500,2026-07-26
-1046,Rahul,Laptop,75000,2026-07-04
-1040,Arjun  , Tablet ,30000,2026-07-05
-1051,Eve,Laptop,75000,2026-07-22
-1013,Charlie,Monitor,15000,2026-07-25
-1034,Frank,Laptop,75000,2026-07-08
-1029,  Arjun,mouse,1200,2026-07-20
-1014,  Frank,Mouse,1200,2026-07-03
-1010,  Sneha  ,Laptop,75000,2026-07-25
-1030,  Kiran  ,Keyboard,2500,2026-07-18
-1054,Kiran,Webcam,4500,2026-07-04
-1018,Henry,Mouse,1200,2026-07-13
-1004,Bob  , Mouse ,1200,2026-07-19
-1016,Sneha  , Webcam ,4500,2026-07-20
-1009,Henry,Headphones,3500,2026-07-26
-1027,Frank,Webcam,4500,2026-07-07
-1017,  Eve,  laptop  ,75000,2026-07-24
-1050,  Jack,tablet,30000,2026-07-17
-1026,  Sneha,  webcam  ,4500,2026-07-06
-1043,Jack,printer,12000,2026-07-19
-1031,Meera,Monitor,15000,2026-07-06
-1023,  Eve,Mouse,1200,2026-07-08
-1002,  Meera,Headphones,3500,2026-07-08
-1021,Diana,Mouse,1200,2026-07-02
-1026,  Sneha,  webcam  ,4500,2026-07-06
-1045,  Charlie  ,Tablet,30000,2026-07-03
-1042,Meera,Headphones,3500,2026-07-24
-1025,  Eve  ,Tablet,30000,2026-07-21
-1027,Frank,Webcam,4500,2026-07-07
-1018,Henry,Mouse,1200,2026-07-13
-1019,Bob,Headphones,3500,2026-07-21
-1001,Kiran,mouse,1200,2026-07-01
-1048,Kiran  , Printer ,12000,2026-07-20
-1003,Diana,Keyboard,2500,2026-07-24
-1042,Meera,Headphones,3500,2026-07-24
-1008,  Diana, Printer ,12000,2026-07-08
-1040,Arjun  , Tablet ,30000,2026-07-05
-1055,  Eve  ,Printer,12000,2026-07-06
-1045,  Charlie  ,Tablet,30000,2026-07-03
-1029,  Arjun,mouse,1200,2026-07-20
-1015,  Grace  ,mouse,1200,2026-07-12
-1012,Grace  , Webcam ,4500,2026-07-09
-1044,  Grace, Webcam ,4500,2026-07-08
-1022,Kiran,monitor,15000,2026-07-25
-1049,Bob,Printer,12000,2026-07-13
-1052,Meera  , Mouse ,1200,2026-07-22
-1048,Kiran  , Printer ,12000,2026-07-20
-1014,  Frank,Mouse,1200,2026-07-03
-1028,Kiran  , Headphones ,3500,2026-07-23
-1053,  Arjun,  headphones  ,3500,2026-07-25
-1011,  Rahul,Keyboard,2500,2026-07-23
-1031,Meera,Monitor,15000,2026-07-06
-1036,Frank  , Printer ,12000,2026-07-09
-1009,Henry,Headphones,3500,2026-07-26
-1035,  Sneha,  laptop  ,75000,2026-07-26
-1005,  Grace,Laptop,75000,2026-07-01
-1043,Jack,printer,12000,2026-07-19
-1044,  Grace, Webcam ,4500,2026-07-08
-1006,Bob,Monitor,15000,2026-07-08
-1037,Bob,Monitor,15000,2026-07-19
-1050,  Jack,tablet,30000,2026-07-17
-1004,Bob  , Mouse ,1200,2026-07-19
-1016,Sneha  , Webcam ,4500,2026-07-20
-1020,  Jack, Webcam ,4500,2026-07-19
-1024,Sneha  , Mouse ,1200,2026-07-13
-1008,  Diana, Printer ,12000,2026-07-08
-1002,  Meera,Headphones,3500,2026-07-08
-1032,  Henry, Printer ,12000,2026-07-09
-1021,Diana,Mouse,1200,2026-07-02
-1039,Kiran,Tablet,30000,2026-07-13
-1055,  Eve  ,Printer,12000,2026-07-06
-1034,Frank,Laptop,75000,2026-07-08
-1035,  Sneha,  laptop  ,75000,2026-07-26
-1011,  Rahul,Keyboard,2500,2026-07-23
-1024,Sneha  , Mouse ,1200,2026-07-13
-1010,  Sneha  ,Laptop,75000,2026-07-25
-1013,Charlie,Monitor,15000,2026-07-25
-1039,Kiran,Tablet,30000,2026-07-13
-1051,Eve,Laptop,75000,2026-07-22
-1041,  Eve,Keyboard,2500,2026-07-08
-1020,  Jack, Webcam ,4500,2026-07-19
-1041,  Eve,Keyboard,2500,2026-07-08
-1007,Ivy,Laptop,75000,2026-07-18
-1053,  Arjun,  headphones  ,3500,2026-07-25
-1012,Grace  , Webcam ,4500,2026-07-09
-1049,Bob,Printer,12000,2026-07-13
-1033,Arjun,Monitor,15000,2026-07-22
-1017,  Eve,  laptop  ,75000,2026-07-24
-1054,Kiran,Webcam,4500,2026-07-04
-1047,  Charlie,Keyboard,2500,2026-07-26
-1001,Kiran,mouse,1200,2026-07-01
-1030,  Kiran  ,Keyboard,2500,2026-07-18
+order_id,customer_name,product,price,order_date,batch_id,source_file,ingestion_timestamp
+1038,  Arjun,Webcam,4500,2026-07-07,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1052,Meera  , Mouse ,1200,2026-07-22,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1028,Kiran  , Headphones ,3500,2026-07-23,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1005,  Grace,Laptop,75000,2026-07-01,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1037,Bob,Monitor,15000,2026-07-19,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1023,  Eve,Mouse,1200,2026-07-08,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1003,Diana,Keyboard,2500,2026-07-24,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1032,  Henry, Printer ,12000,2026-07-09,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1007,Ivy,Laptop,75000,2026-07-18,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1025,  Eve  ,Tablet,30000,2026-07-21,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1038,  Arjun,Webcam,4500,2026-07-07,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1022,Kiran,monitor,15000,2026-07-25,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1036,Frank  , Printer ,12000,2026-07-09,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1033,Arjun,Monitor,15000,2026-07-22,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1046,Rahul,Laptop,75000,2026-07-04,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1015,  Grace  ,mouse,1200,2026-07-12,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1006,Bob,Monitor,15000,2026-07-08,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1019,Bob,Headphones,3500,2026-07-21,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1047,  Charlie,Keyboard,2500,2026-07-26,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1046,Rahul,Laptop,75000,2026-07-04,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1040,Arjun  , Tablet ,30000,2026-07-05,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1051,Eve,Laptop,75000,2026-07-22,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1013,Charlie,Monitor,15000,2026-07-25,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1034,Frank,Laptop,75000,2026-07-08,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1029,  Arjun,mouse,1200,2026-07-20,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1014,  Frank,Mouse,1200,2026-07-03,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1010,  Sneha  ,Laptop,75000,2026-07-25,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1030,  Kiran  ,Keyboard,2500,2026-07-18,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1054,Kiran,Webcam,4500,2026-07-04,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1018,Henry,Mouse,1200,2026-07-13,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1004,Bob  , Mouse ,1200,2026-07-19,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1016,Sneha  , Webcam ,4500,2026-07-20,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1009,Henry,Headphones,3500,2026-07-26,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1027,Frank,Webcam,4500,2026-07-07,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1017,  Eve,  laptop  ,75000,2026-07-24,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1050,  Jack,tablet,30000,2026-07-17,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1026,  Sneha,  webcam  ,4500,2026-07-06,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1043,Jack,printer,12000,2026-07-19,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1031,Meera,Monitor,15000,2026-07-06,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1023,  Eve,Mouse,1200,2026-07-08,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1002,  Meera,Headphones,3500,2026-07-08,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1021,Diana,Mouse,1200,2026-07-02,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1026,  Sneha,  webcam  ,4500,2026-07-06,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1045,  Charlie  ,Tablet,30000,2026-07-03,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1042,Meera,Headphones,3500,2026-07-24,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1025,  Eve  ,Tablet,30000,2026-07-21,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1027,Frank,Webcam,4500,2026-07-07,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1018,Henry,Mouse,1200,2026-07-13,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1019,Bob,Headphones,3500,2026-07-21,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1001,Kiran,mouse,1200,2026-07-01,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1048,Kiran  , Printer ,12000,2026-07-20,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1003,Diana,Keyboard,2500,2026-07-24,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1042,Meera,Headphones,3500,2026-07-24,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1008,  Diana, Printer ,12000,2026-07-08,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1040,Arjun  , Tablet ,30000,2026-07-05,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1055,  Eve  ,Printer,12000,2026-07-06,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1045,  Charlie  ,Tablet,30000,2026-07-03,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1029,  Arjun,mouse,1200,2026-07-20,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1015,  Grace  ,mouse,1200,2026-07-12,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1012,Grace  , Webcam ,4500,2026-07-09,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1044,  Grace, Webcam ,4500,2026-07-08,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1022,Kiran,monitor,15000,2026-07-25,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1049,Bob,Printer,12000,2026-07-13,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1052,Meera  , Mouse ,1200,2026-07-22,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1048,Kiran  , Printer ,12000,2026-07-20,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1014,  Frank,Mouse,1200,2026-07-03,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1028,Kiran  , Headphones ,3500,2026-07-23,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1053,  Arjun,  headphones  ,3500,2026-07-25,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1011,  Rahul,Keyboard,2500,2026-07-23,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1031,Meera,Monitor,15000,2026-07-06,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1036,Frank  , Printer ,12000,2026-07-09,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1009,Henry,Headphones,3500,2026-07-26,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1035,  Sneha,  laptop  ,75000,2026-07-26,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1005,  Grace,Laptop,75000,2026-07-01,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1043,Jack,printer,12000,2026-07-19,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1044,  Grace, Webcam ,4500,2026-07-08,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1006,Bob,Monitor,15000,2026-07-08,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1037,Bob,Monitor,15000,2026-07-19,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1050,  Jack,tablet,30000,2026-07-17,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1004,Bob  , Mouse ,1200,2026-07-19,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1016,Sneha  , Webcam ,4500,2026-07-20,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1020,  Jack, Webcam ,4500,2026-07-19,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1024,Sneha  , Mouse ,1200,2026-07-13,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1008,  Diana, Printer ,12000,2026-07-08,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1002,  Meera,Headphones,3500,2026-07-08,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1032,  Henry, Printer ,12000,2026-07-09,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1021,Diana,Mouse,1200,2026-07-02,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1039,Kiran,Tablet,30000,2026-07-13,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1055,  Eve  ,Printer,12000,2026-07-06,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1034,Frank,Laptop,75000,2026-07-08,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1035,  Sneha,  laptop  ,75000,2026-07-26,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1011,  Rahul,Keyboard,2500,2026-07-23,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1024,Sneha  , Mouse ,1200,2026-07-13,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1010,  Sneha  ,Laptop,75000,2026-07-25,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1013,Charlie,Monitor,15000,2026-07-25,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1039,Kiran,Tablet,30000,2026-07-13,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1051,Eve,Laptop,75000,2026-07-22,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1041,  Eve,Keyboard,2500,2026-07-08,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1020,  Jack, Webcam ,4500,2026-07-19,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1041,  Eve,Keyboard,2500,2026-07-08,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1007,Ivy,Laptop,75000,2026-07-18,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1053,  Arjun,  headphones  ,3500,2026-07-25,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1012,Grace  , Webcam ,4500,2026-07-09,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1049,Bob,Printer,12000,2026-07-13,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1033,Arjun,Monitor,15000,2026-07-22,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1017,  Eve,  laptop  ,75000,2026-07-24,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1054,Kiran,Webcam,4500,2026-07-04,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1047,  Charlie,Keyboard,2500,2026-07-26,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1001,Kiran,mouse,1200,2026-07-01,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55
+1030,  Kiran  ,Keyboard,2500,2026-07-18,BATCH_24332D77,external_orders_messy_110_records.csv,2026-08-06 16:29:55

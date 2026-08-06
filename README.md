@@ -1,84 +1,125 @@
 # Retail Data Engineering Platform
+
+
 [![Python CI](https://github.com/Bhanu73120/retail-data-engineering-platform/actions/workflows/python-app.yml/badge.svg)](https://github.com/Bhanu73120/retail-data-engineering-platform/actions/workflows/python-app.yml)
 
 
-## Project Overview
+An end-to-end Retail Data Engineering project that implements a complete ETL pipeline using Python, Apache Airflow, MySQL, and GitHub Actions.
 
-The Retail Data Engineering Platform is an end-to-end ETL (Extract, Transform, Load) pipeline built using Python. The project processes raw retail order data through multiple stages, including data validation, cleaning, transformation, and analytical reporting.
-
-The pipeline follows the Medallion Architecture (Raw → Bronze → Silver → Gold), which is widely used in modern Data Engineering projects. The project also includes automated unit testing, logging, and Continuous Integration (CI) using GitHub Actions to ensure code quality and reliability.
+The pipeline automatically ingests retail order CSV files, validates and cleans the data, applies business rules, generates analytical summaries, and stores processed data into MySQL using the Medallion Architecture (Raw → Bronze → Silver → Gold).
 
 ---
 
-##  Architecture
+# Project Architecture
 
-                Raw Orders CSV
-                      │
-                      ▼
-              Data Ingestion
-                      │
-                      ▼
-        Validate Required Columns
-        Validate Data Types
-                      │
-                      ▼
-          Clean Customer Data
-          Clean Product Data
-          Remove Duplicates
-                      │
-                      ▼
-               Bronze Layer
-                      │
-                      ▼
-          Validate Cleaned Data
-                      │
-                      ▼
-          Apply Business Rules
-        • Price Category
-        • Discount
-        • Final Price
-                      │
-                      ▼
-               Silver Layer
-                      │
-                      ▼
-         Generate Sales Summary
-                      │
-                      ▼
-                Gold Layer
+```
+                External CSV Files
+                        │
+                        ▼
+              Airflow DAG Trigger
+                        │
+                        ▼
+                Raw Data Ingestion
+                        │
+                        ▼
+              Data Validation
+                        │
+                        ▼
+            Customer & Product Cleaning
+                        │
+                        ▼
+             Duplicate Removal
+                        │
+                        ▼
+                 Bronze Layer
+                        │
+                        ▼
+            Business Rule Processing
+                        │
+                        ▼
+                 Silver Layer
+                        │
+                        ▼
+          Sales Summary Generation
+                        │
+                        ▼
+                  Gold Layer
+                        │
+                        ▼
+                MySQL Data Warehouse
+```
 
-##  Features
 
-- End-to-End ETL Pipeline
-- Data Validation
-- Data Cleaning
-- Duplicate Removal
-- Business Rule Implementation
-- Sales Summary Generation
-- Structured Logging
-- Unit Testing using Pytest
-- Code Coverage using pytest-cov
+## Airflow DAG
+
+![Airflow Graph](docs/images/airflow_graph.png)
+
+
+## Successful Pipeline Run
+
+![Airflow Success](docs/images/pipeline_summary.png)
+
+
+## GitHub Actions
+
+![Python CI](dashboards/screenshots/github_actions.png)
+
+
+## Power BI Dashboard
+
+![Power BI](dashboards/screenshots/powerbi_dashboard.png)
+
+## Power BI Dashboard By Product
+
+![Power BI](dashboards/screenshots/dashboard_overview_by_product.png)
+
+---
+
+# Features
+
+- Automated ETL Pipeline using Apache Airflow
+- Dynamic Batch ID generation
+- Source file tracking
+- Ingestion timestamp tracking
+- Raw → Bronze → Silver → Gold architecture
+- Data validation before and after cleaning
+- Customer data cleaning
+- Product data cleaning
+- Duplicate removal
+- Business rule implementation
+- Sales summary generation
+- MySQL data warehouse loading
+- Structured logging
+- Unit testing using Pytest
+- Code coverage using pytest-cov
 - Continuous Integration using GitHub Actions
 
+---
 
-##  Tech Stack
+# Tech Stack
 
 - Python 3.11
+- Apache Airflow 2.10
+- MySQL
 - Pandas
 - NumPy
 - Pytest
-- Pytest-Cov
 - Git
 - GitHub
 - GitHub Actions
 
+---
 
-##  Project Structure
+# Project Structure
 
+```
 retail-data-engineering-platform
 │
+├── airflow/
+│   └── dags/
+│       └── retail_pipeline_dag.py
+│
 ├── config/
-│   └── config.py
 │
 ├── data/
 │   ├── raw/
@@ -86,11 +127,13 @@ retail-data-engineering-platform
 │   ├── silver/
 │   └── gold/
 │
+├── dashboards/
+│   ├── powerbi/
+│   └── screenshots/
+│
+├── docs/
+│
 ├── scripts/
-│   ├── download_data.py
-│   ├── raw_to_bronze.py
-│   ├── bronze_to_silver.py
-│   └── silver_to_gold.py
 │
 ├── src/
 │   ├── ingestion/
@@ -99,134 +142,223 @@ retail-data-engineering-platform
 │   ├── warehouse/
 │   └── utils/
 │
+├── sql/
+│
 ├── tests/
 │
 ├── requirements.txt
 │
 └── README.md
+```
 
+---
 
-##  How to Run
+# ETL Pipeline
 
-### Clone the Repository
+## Raw Layer
+
+- Reads retail CSV files
+- Generates Batch ID
+- Stores source filename
+- Stores ingestion timestamp
+
+---
+
+## Bronze Layer
+
+- Validates input data
+- Removes duplicate records
+- Cleans customer names
+- Cleans product names
+
+---
+
+## Silver Layer
+
+Applies business rules:
+
+- Price Category
+- Discount
+- Final Price
+
+---
+
+## Gold Layer
+
+Generates analytical metrics:
+
+- Total Revenue
+- Total Orders
+- Average Order Value
+- Highest Order Value
+- Lowest Order Value
+
+---
+
+# MySQL Tables
+
+The pipeline loads processed data into three tables.
+
+## orders
+
+Stores cleaned Bronze layer data.
+
+## orders_silver
+
+Stores business-rule enriched Silver layer data.
+
+## sales_summary
+
+Stores Gold layer analytical metrics.
+
+Each batch includes:
+
+- Batch ID
+- Source File
+- Ingestion Timestamp
+
+---
+
+# Running the Project
+
+## Clone Repository
 
 ```bash
 git clone https://github.com/Bhanu73120/retail-data-engineering-platform.git
 ```
 
-### Navigate to the Project
+---
+
+## Move into Project
 
 ```bash
 cd retail-data-engineering-platform
 ```
 
-### Create Virtual Environment
+---
+
+## Create Virtual Environment
+
+### Windows
 
 ```bash
 python -m venv venv
-```
-
-### Activate Virtual Environment
-
-**Windows**
-
-```bash
 venv\Scripts\activate
 ```
 
-**Linux / macOS**
+### Linux
 
 ```bash
+python3 -m venv venv
 source venv/bin/activate
 ```
 
-### Install Dependencies
+---
+
+## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Execute the ETL Pipeline
+---
 
-```bash
-python -m scripts.download_data
+## Configure Airflow
 
-python -m scripts.raw_to_bronze
+Configure:
 
-python -m scripts.bronze_to_silver
+- Airflow Variables
+- MySQL Connection
 
-python -m scripts.silver_to_gold
+Place CSV files into:
+
+```
+External_CSVs/incoming/
+```
+
+Run the DAG:
+
+```
+retail_data_pipeline
 ```
 
 ---
 
-## ✅ Running Unit Tests
+# Running Tests
 
-Run all unit tests
+Run all tests
 
 ```bash
 pytest
 ```
 
-Run tests with code coverage
+Run with coverage
 
 ```bash
-python -m pytest --cov=src --cov-report=html
-```
-
-Open the HTML coverage report
-
-**Windows**
-
-```bash
-start htmlcov/index.html
+python -m pytest --cov=src
 ```
 
 ---
 
-## ⚙️ Continuous Integration
+# Continuous Integration
 
-This project uses **GitHub Actions** for Continuous Integration.
+GitHub Actions automatically runs:
 
-Whenever code is pushed to the **main** branch:
+- Dependency installation
+- Unit tests
+- Code coverage
 
-- A fresh Ubuntu runner is created
-- Python is installed
-- Project dependencies are installed
-- All unit tests are executed automatically
-- The workflow reports Success or Failure
-
-
-##  Current Project Status
-
-- ✔ Raw Layer Implemented
-- ✔ Bronze Layer Implemented
-- ✔ Silver Layer Implemented
-- ✔ Gold Layer Implemented
-- ✔ Data Validation
-- ✔ Data Cleaning
-- ✔ Business Rules
-- ✔ Logging
-- ✔ Unit Testing
-- ✔ Code Coverage
-- ✔ GitHub Actions CI
-
-
-##  Future Improvements
-
-- Docker
-- Apache Airflow
-- Azure Data Factory
-- Azure Data Lake Storage
-- Databricks
-- Snowflake
-- Power BI Dashboard
-- CI/CD Deployment
+Every push to the `main` branch is automatically validated.
 
 ---
 
-##  Author
+# Project Documentation
+
+Detailed setup guides are available inside the `docs` folder.
+
+- project_overview.md
+- airflow_setup.md
+- mysql_setup.md
+- pipeline_execution.md
+
+---
+
+# Dashboard
+
+Power BI dashboard is available in:
+
+```
+dashboards/powerbi/
+```
+
+Pipeline screenshots are available in:
+
+```
+dashboards/screenshots/
+```
+
+---
+
+# Project Status
+
+- ✅ Raw Layer
+- ✅ Bronze Layer
+- ✅ Silver Layer
+- ✅ Gold Layer
+- ✅ Apache Airflow
+- ✅ MySQL Integration
+- ✅ Batch Metadata Tracking
+- ✅ Source File Tracking
+- ✅ Ingestion Timestamp Tracking
+- ✅ Unit Testing
+- ✅ GitHub Actions CI Passing
+
+---
+
+# Author
 
 **Bhanu Prakash**
 
-GitHub: https://github.com/Bhanu73120
+GitHub:
+
+https://github.com/Bhanu73120

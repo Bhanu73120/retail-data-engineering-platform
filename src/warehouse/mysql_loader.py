@@ -77,32 +77,12 @@ def load_orders(
     query = """
 
     INSERT INTO orders
-    (
-        order_id,
-        customer_name,
-        product,
-        price,
-        order_date,
-        batch_id
-    )
-
-    VALUES
-    (
-        %s,
-        %s,
-        %s,
-        %s,
-        %s,
-        %s
-    )
-
+    (order_id,customer_name,product,price,order_date,batch_id,source_file,ingestion_timestamp)
+    VALUES(%s,%s,%s,%s,%s,%s,%s,%s)
     ON DUPLICATE KEY UPDATE
-
-    customer_name = VALUES(customer_name),
-    product = VALUES(product),
-    price = VALUES(price),
-    order_date = VALUES(order_date),
-    batch_id = VALUES(batch_id)
+    customer_name = VALUES(customer_name),product = VALUES(product),price = VALUES(price),
+    order_date = VALUES(order_date),source_file = VALUES(source_file),
+    ingestion_timestamp = VALUES(ingestion_timestamp)
 
     """
 
@@ -119,6 +99,8 @@ def load_orders(
                 row["price"],
                 row["order_date"],
                 row["batch_id"],
+                row["source_file"],
+                row["ingestion_timestamp"]
             )
         )
 
@@ -218,11 +200,15 @@ def load_silver(
         price_category,
         discount,
         final_price,
-        batch_id
+        batch_id,
+        source_file,
+        ingestion_timestamp
     )
 
     VALUES
     (
+        %s,
+        %s,
         %s,
         %s,
         %s,
@@ -243,7 +229,8 @@ def load_silver(
     price_category = VALUES(price_category),
     discount = VALUES(discount),
     final_price = VALUES(final_price),
-    batch_id = VALUES(batch_id)
+    source_file = VALUES(source_file),
+    ingestion_timestamp = VALUES(ingestion_timestamp)
 
     """
 
@@ -263,6 +250,8 @@ def load_silver(
                 row["discount"],
                 row["final_price"],
                 row["batch_id"],
+                row["source_file"],
+                row["ingestion_timestamp"]
             )
         )
 
@@ -353,24 +342,12 @@ def load_sales_summary(
 
     query = """
 
-    INSERT INTO sales_summary
-    (
-        metric,
-        value,
-        batch_id
-    )
-
-    VALUES
-    (
-        %s,
-        %s,
-        %s
-    )
-
+    INSERT INTO sales_summary(metric,value,batch_id,source_file,ingestion_timestamp)
+    VALUES(%s,%s,%s,%s,%s)
     ON DUPLICATE KEY UPDATE
-
-    value = VALUES(value),
-    batch_id = VALUES(batch_id)
+    value = VALUES(value), 
+    source_file = VALUES(source_file),
+    ingestion_timestamp = VALUES(ingestion_timestamp)
 
     """
 
@@ -383,7 +360,9 @@ def load_sales_summary(
             (
                 row["metric"],
                 row["value"],
-                row["batch_id"]
+                row["batch_id"],
+                row["source_file"],
+                row["ingestion_timestamp"]
             )
         )
 
