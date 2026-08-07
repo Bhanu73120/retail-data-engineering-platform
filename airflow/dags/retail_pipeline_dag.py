@@ -190,6 +190,18 @@ def ingest_orders():
 
     orders["batch_id"] = batch_id
 
+    # -----------------------------------------------------
+    # Pipeline Metadata
+    # -----------------------------------------------------
+
+    source_file = file_name
+
+    ingestion_timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    orders["source_file"] = source_file
+
+    orders["ingestion_timestamp"] = ingestion_timestamp
+
 
     raw_count = len(
         orders
@@ -265,6 +277,8 @@ def ingest_orders():
 
     return {
         "batch_id": batch_id,
+        "source_file": source_file,
+        "ingestion_timestamp": ingestion_timestamp,
         "raw_file_path": raw_file_path,
         "raw_count": raw_count
     }
@@ -729,7 +743,6 @@ def transform_silver_to_gold(
         orders
     )
 
-    summary["batch_id"] = batch_id
 
     print(
         "Sales summary generated successfully"
@@ -848,6 +861,8 @@ def display_pipeline_summary(
 ):
 
     batch_id = ingestion_result["batch_id"]
+    source_file = ingestion_result["source_file"]
+    ingestion_timestamp = ingestion_result["ingestion_timestamp"]
 
     raw_count = ingestion_result[
         "raw_count"
@@ -870,6 +885,14 @@ def display_pipeline_summary(
  
     print(
         f"Batch ID         : {batch_id}"
+    )
+
+    print(
+        f"Source File      : {source_file}"
+    )
+
+    print(
+        f"Ingestion Time   : {ingestion_timestamp}"
     )
 
     print(
