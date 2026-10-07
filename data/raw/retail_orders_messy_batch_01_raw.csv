@@ -1,0 +1,24 @@
+order_id,customer_name,product,price,order_date,batch_id,source_file,ingestion_timestamp
+1001,  Rahul Sharma ,Laptop,55000,2026-09-01,BATCH_A5FD6113,retail_orders_messy_batch_01.csv,2026-10-01 05:44:54
+1002,PRIYA REDDY, mouse ,799,2026-09-02,BATCH_A5FD6113,retail_orders_messy_batch_01.csv,2026-10-01 05:44:54
+1003,Arjun Kumar,KEYBOARD,1499,2026-09-03,BATCH_A5FD6113,retail_orders_messy_batch_01.csv,2026-10-01 05:44:54
+1004, sneha patel,Monitor ,12500,2026-09-04,BATCH_A5FD6113,retail_orders_messy_batch_01.csv,2026-10-01 05:44:54
+1005,VIKRAM SINGH ,headphones,2499,2026-09-05,BATCH_A5FD6113,retail_orders_messy_batch_01.csv,2026-10-01 05:44:54
+1006,Anjali Rao,LAPTOP,62000,2026-09-06,BATCH_A5FD6113,retail_orders_messy_batch_01.csv,2026-10-01 05:44:54
+1007, rohit das ,Mouse,999,2026-09-07,BATCH_A5FD6113,retail_orders_messy_batch_01.csv,2026-10-01 05:44:54
+1008,MEERA NAIR, keyboard ,1899,2026-09-08,BATCH_A5FD6113,retail_orders_messy_batch_01.csv,2026-10-01 05:44:54
+1009,Karan Joshi,MONITOR,15999,2026-09-09,BATCH_A5FD6113,retail_orders_messy_batch_01.csv,2026-10-01 05:44:54
+1010, divya shah ,Headphones ,3299,2026-09-10,BATCH_A5FD6113,retail_orders_messy_batch_01.csv,2026-10-01 05:44:54
+1011,Amit Verma,Laptop,48000,2026-09-11,BATCH_A5FD6113,retail_orders_messy_batch_01.csv,2026-10-01 05:44:54
+1012,NEHA GUPTA,MOUSE,649,2026-09-12,BATCH_A5FD6113,retail_orders_messy_batch_01.csv,2026-10-01 05:44:54
+1013,Sanjay Mehta , keyboard,2199,2026-09-13,BATCH_A5FD6113,retail_orders_messy_batch_01.csv,2026-10-01 05:44:54
+1014, pooja iyer ,Monitor,10999,2026-09-14,BATCH_A5FD6113,retail_orders_messy_batch_01.csv,2026-10-01 05:44:54
+1015,RAVI KAPOOR,HEADPHONES,1799,2026-09-15,BATCH_A5FD6113,retail_orders_messy_batch_01.csv,2026-10-01 05:44:54
+1016,Kavya Nair, laptop ,71000,2026-09-16,BATCH_A5FD6113,retail_orders_messy_batch_01.csv,2026-10-01 05:44:54
+1017, mohit jain,Mouse ,1199,2026-09-17,BATCH_A5FD6113,retail_orders_messy_batch_01.csv,2026-10-01 05:44:54
+1018,SWATI ROY ,Keyboard,2799,2026-09-18,BATCH_A5FD6113,retail_orders_messy_batch_01.csv,2026-10-01 05:44:54
+1019,Nikhil Rao, monitor ,18999,2026-09-19,BATCH_A5FD6113,retail_orders_messy_batch_01.csv,2026-10-01 05:44:54
+1020, isha singh ,HEADPHONES,4499,2026-09-20,BATCH_A5FD6113,retail_orders_messy_batch_01.csv,2026-10-01 05:44:54
+1003,Arjun Kumar,KEYBOARD,1499,2026-09-03,BATCH_A5FD6113,retail_orders_messy_batch_01.csv,2026-10-01 05:44:54
+1010, divya shah ,Headphones ,3299,2026-09-10,BATCH_A5FD6113,retail_orders_messy_batch_01.csv,2026-10-01 05:44:54
+1017, mohit jain,Mouse ,1199,2026-09-17,BATCH_A5FD6113,retail_orders_messy_batch_01.csv,2026-10-01 05:44:54

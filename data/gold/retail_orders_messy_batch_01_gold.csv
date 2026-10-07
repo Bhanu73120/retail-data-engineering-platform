@@ -1,0 +1,6 @@
+metric,value,batch_id,source_file,ingestion_timestamp
+Total Revenue,278578.39999999997,BATCH_A5FD6113,retail_orders_messy_batch_01.csv,2026-10-01 05:44:54
+Total Orders,20.0,BATCH_A5FD6113,retail_orders_messy_batch_01.csv,2026-10-01 05:44:54
+Average Order Value,13928.919999999998,BATCH_A5FD6113,retail_orders_messy_batch_01.csv,2026-10-01 05:44:54
+Highest Order Value,60350.0,BATCH_A5FD6113,retail_orders_messy_batch_01.csv,2026-10-01 05:44:54
+Lowest Order Value,616.55,BATCH_A5FD6113,retail_orders_messy_batch_01.csv,2026-10-01 05:44:54
