@@ -6,7 +6,15 @@
 
 An end-to-end Retail Data Engineering project that implements a complete ETL pipeline using Python, Apache Airflow, MySQL, and GitHub Actions.
 
-The pipeline automatically ingests retail order CSV files, validates and cleans the data, applies business rules, generates analytical summaries, and stores processed data into MySQL using the Medallion Architecture (Raw → Bronze → Silver → Gold).
+The pipeline processes retail order CSV files through a manually triggered Apache Airflow DAG, validates and cleans the data, applies business rules, generates analytical summaries, and loads processed data into MySQL using a Raw → Bronze → Silver → Gold architecture.
+
+## 🎯 Problem Statement
+
+Retail transaction data often arrives as raw CSV files containing duplicate records, inconsistent customer and product information, and data that is not immediately suitable for analytics.
+
+This project builds an ETL pipeline that transforms raw retail order data into clean, validated, and analytics-ready datasets using a layered data architecture.
+
+The pipeline demonstrates how raw transactional data can be progressively processed through Raw, Bronze, Silver, and Gold layers before being stored in MySQL and used for downstream analytics.
 
 ---
 
@@ -77,7 +85,7 @@ The pipeline automatically ingests retail order CSV files, validates and cleans 
 
 # Features
 
-- Automated ETL Pipeline using Apache Airflow
+- ETL pipeline orchestration using Apache Airflow
 - Dynamic Batch ID generation
 - Source file tracking
 - Ingestion timestamp tracking
@@ -110,46 +118,36 @@ The pipeline automatically ingests retail order CSV files, validates and cleans 
 
 ---
 
-# Project Structure
+## 📁 Project Structure
 
-```
-retail-data-engineering-platform
+retail-data-engineering-platform/
 │
 ├── airflow/
-│   └── dags/
-│       └── retail_pipeline_dag.py
-│
-├── config/
+│   └── dags/                  # Airflow DAG definitions
 │
 ├── data/
-│   ├── raw/
-│   ├── bronze/
-│   ├── silver/
-│   └── gold/
-│
-├── dashboards/
-│   ├── powerbi/
-│   └── screenshots/
-│
-├── docs/
+│   ├── raw/                   # Raw ingested data
+│   ├── bronze/                # Standardized and deduplicated data
+│   ├── silver/                # Cleaned and validated data
+│   └── gold/                  # Business-ready aggregated data
 │
 ├── scripts/
+│   ├── data_download.py       # Raw data ingestion
+│   ├── raw_to_bronze.py       # Raw → Bronze processing
+│   ├── bronze_to_silver.py    # Bronze → Silver transformation
+│   └── silver_to_gold.py      # Silver → Gold aggregation
 │
 ├── src/
-│   ├── ingestion/
-│   ├── transformation/
-│   ├── validation/
-│   ├── warehouse/
-│   └── utils/
+│   ├── ingestion/             # Data ingestion logic
+│   ├── transformation/        # Cleaning and business rules
+│   ├── warehouse/             # Final data storage logic
+│   └── utils/                 # Shared utilities
 │
-├── sql/
-│
-├── tests/
-│
+├── tests/                     # Pipeline tests
+├── docs/                      # Architecture and screenshots
 ├── requirements.txt
-│
+├── .gitignore
 └── README.md
-```
 
 ---
 
@@ -336,24 +334,6 @@ Pipeline screenshots are available in:
 ```
 dashboards/screenshots/
 ```
-
----
-
-# Project Status
-
-- ✅ Raw Layer
-- ✅ Bronze Layer
-- ✅ Silver Layer
-- ✅ Gold Layer
-- ✅ Apache Airflow
-- ✅ MySQL Integration
-- ✅ Batch Metadata Tracking
-- ✅ Source File Tracking
-- ✅ Ingestion Timestamp Tracking
-- ✅ Unit Testing
-- ✅ GitHub Actions CI Passing
-
----
 
 # Author
 
